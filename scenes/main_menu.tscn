@@ -1,0 +1,114 @@
+[gd_scene load_steps=7 format=3 uid="uid://du1ejbd20aks4"]
+
+[ext_resource type="Script" path="res://scenes/mainmenuftb.gd" id="1_gtt12"]
+[ext_resource type="AudioStream" uid="uid://cjkrmgts02h75" path="res://assets/moonskull.mp3" id="2_conrl"]
+[ext_resource type="Texture2D" uid="uid://c1b52eyjbxu17" path="res://assets/manipulation-4090333.jpg" id="2_r16ah"]
+[ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="3_688ly"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xnyq"]
+texture = ExtResource("2_r16ah")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_der2h"]
+bg_color = Color(1, 1, 1, 1)
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 16
+shadow_size = 1
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gtt12")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_conrl")
+autoplay = true
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -52.0
+offset_top = -111.0
+offset_right = 43.0
+offset_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7xnyq")
+
+[node name="Buttonlist" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.271
+anchor_right = 0.5
+anchor_bottom = 0.271
+offset_left = -175.815
+offset_top = 205.392
+offset_right = 205.185
+offset_bottom = 472.392
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="startgame" type="Button" parent="Buttonlist"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 5
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
+action_mode = 0
+text = "Start Game"
+
+[node name="options" type="Button" parent="Buttonlist"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 5
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
+text = "Options"
+
+[node name="quit" type="Button" parent="Buttonlist"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/h_separation = 5
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.52
+anchor_top = 0.231
+anchor_right = 0.536
+anchor_bottom = 0.231
+offset_left = -561.04
+offset_top = -97.688
+offset_right = 572.528
+offset_bottom = 88.312
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.945, 0.945)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_688ly")
+theme_override_font_sizes/font_size = 155
+text = "MoonSkull"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="Buttonlist/startgame" to="." method="_on_startgame_pressed"]
+[connection signal="pressed" from="Buttonlist/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Buttonlist/quit" to="." method="_on_quit_pressed"]
