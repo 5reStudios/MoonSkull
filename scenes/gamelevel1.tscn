@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bw1ne5p400ram"]
+[gd_scene load_steps=14 format=3 uid="uid://bw1ne5p400ram"]
 
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="1_2drxh"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="1_8lcj1"]
@@ -11,6 +11,8 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lgoun"]
 shader = ExtResource("1_8lcj1")
 shader_parameter/speed = 0.001
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 5.0
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1wtpq"]
 shader = ExtResource("1_2drxh")
@@ -19,6 +21,8 @@ shader_parameter/speed = 0.1
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_eik1o"]
 shader = ExtResource("1_8lcj1")
 shader_parameter/speed = 0.01
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 5.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1ixi"]
 texture = ExtResource("5_ow3ty")
@@ -206,6 +210,8 @@ texture = ExtResource("5_ow3ty")
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_s1ixi")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2twav"]
+
 [node name="Node" type="Node"]
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -284,3 +290,11 @@ text = "Space to Jump
 
 Arrow Keys to move"
 threaded = true
+
+[node name="dangerzone" type="Area2D" parent="."]
+scale = Vector2(3.76, 3.76)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dangerzone"]
+position = Vector2(106.383, 173.936)
+scale = Vector2(2.225, 2.225)
+shape = SubResource("WorldBoundaryShape2D_2twav")

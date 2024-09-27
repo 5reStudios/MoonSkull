@@ -1,6 +1,7 @@
-[gd_scene load_steps=37 format=3 uid="uid://blcckit2adnu8"]
+[gd_scene load_steps=39 format=3 uid="uid://blcckit2adnu8"]
 
 [ext_resource type="Texture2D" uid="uid://cwycmu44740g2" path="res://assets/craftpix-net-211148-free-fantasy-chibi-female-sprites-pixel-art/Enchantress/Idle.png" id="1_0v5t1"]
+[ext_resource type="Shader" path="res://shaders/blackandwhite.gdshader" id="1_rsms3"]
 [ext_resource type="Texture2D" uid="uid://dp3icto0b4hhv" path="res://assets/craftpix-net-211148-free-fantasy-chibi-female-sprites-pixel-art/Enchantress/Jump.png" id="2_siq5f"]
 [ext_resource type="Texture2D" uid="uid://duw12plnxx1aa" path="res://assets/craftpix-net-211148-free-fantasy-chibi-female-sprites-pixel-art/Enchantress/Run.png" id="3_cwe4v"]
 [ext_resource type="Texture2D" uid="uid://eux32cdpkbku" path="res://assets/craftpix-net-211148-free-fantasy-chibi-female-sprites-pixel-art/Enchantress/Walk.png" id="4_b8faa"]
@@ -9,8 +10,8 @@
 script/source = "extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -500.0
+const SPEED = 100.0
+const JUMP_VELOCITY = -300.0
 @onready var sprite_2d = $Sprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -47,6 +48,11 @@ func _physics_process(delta):
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_msbd2"]
 radius = 22.0
 height = 68.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ig12"]
+shader = ExtResource("1_rsms3")
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 0.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ol8sl"]
 atlas = ExtResource("1_0v5t1")
@@ -282,6 +288,7 @@ position = Vector2(-392, -207)
 shape = SubResource("CapsuleShape2D_msbd2")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_8ig12")
 position = Vector2(-380, -236)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
 animation = &"running"

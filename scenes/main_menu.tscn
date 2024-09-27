@@ -14,6 +14,8 @@ shader_parameter/speed = 0.1
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_jck17"]
 shader = ExtResource("4_j2mhd")
 shader_parameter/speed = 0.01
+shader_parameter/flicker_intensity = 0.1
+shader_parameter/flicker_speed = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_der2h"]
 bg_color = Color(1, 1, 1, 1)
