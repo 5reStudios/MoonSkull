@@ -401,7 +401,7 @@ script = SubResource("GDScript_b23vk")
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(-388.5, -200)
 scale = Vector2(1.32812, 1.375)
-energy = 9.0
+energy = 1.79
 texture = SubResource("GradientTexture2D_mlif6")
 texture_scale = 4.87
 
@@ -414,3 +414,4 @@ position = Vector2(-380, -236)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
 animation = &"jumping"
 autoplay = "idle"
+frame_progress = 0.230512
