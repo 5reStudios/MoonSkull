@@ -16,4 +16,4 @@ func _on_volumeonoff_pressed():
 
 
 func _on_menu_button_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")

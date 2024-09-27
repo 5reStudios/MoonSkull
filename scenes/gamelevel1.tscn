@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bw1ne5p400ram"]
+[gd_scene load_steps=19 format=3 uid="uid://bw1ne5p400ram"]
 
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="1_2drxh"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="1_8lcj1"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://c3pnierqetfud" path="res://assets/sheet.png" id="5_ow3ty"]
 [ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="7_40tmr"]
 [ext_resource type="Texture2D" uid="uid://dcvqkumvrnl6n" path="res://assets/stringstar fields/tileset.png" id="7_b5mwq"]
+[ext_resource type="PackedScene" uid="uid://bu2xbah3h87em" path="res://scenes/coin.tscn" id="9_fa6dw"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_1wtpq"]
 shader = ExtResource("1_2drxh")
@@ -487,4 +488,43 @@ scale = Vector2(2.225, 2.225)
 shape = SubResource("WorldBoundaryShape2D_2twav")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 blend_mode = 1
+
+[node name="coins" type="Node2D" parent="."]
+position = Vector2(608, 487)
+scale = Vector2(1.44692, 1.44692)
+
+[node name="coin" parent="coins" instance=ExtResource("9_fa6dw")]
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin2" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(81.5524, 0)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin3" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(0, -96.7571)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin4" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(-331.739, 20.0425)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin5" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(147.9, 0.691116)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098

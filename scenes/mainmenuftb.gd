@@ -6,7 +6,7 @@ func _on_startgame_pressed():
 	get_tree().change_scene_to_file("res://scenes/gamelevel1.tscn")
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/options.tscn")
 
 
 func _on_quit_pressed():

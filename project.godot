@@ -19,6 +19,10 @@ boot_splash/fullsize=false
 boot_splash/use_filter=false
 config/icon="res://images/icon.svg"
 
+[autoload]
+
+Gamemanager="*res://scenes/gamemanager.tscn"
+
 [display]
 
 window/size/mode=3

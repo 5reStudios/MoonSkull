@@ -53,6 +53,7 @@ func _physics_process(delta):
 	move_and_slide()
 	var isLeft =  velocity.x < 0 
 	sprite_2d.flip_h = isLeft
+	print(Gamemanager.positivity)
 "
 
 [sub_resource type="Gradient" id="Gradient_or8uv"]
@@ -414,4 +415,4 @@ position = Vector2(-380, -236)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
 animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.230512
+frame_progress = 0.854803
