@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bw1ne5p400ram"]
+[gd_scene load_steps=13 format=3 uid="uid://bw1ne5p400ram"]
 
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="1_2drxh"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="1_8lcj1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://blcckit2adnu8" path="res://scenes/maincharacer.tscn" id="2_k5qys"]
 [ext_resource type="AudioStream" uid="uid://bgympsmi37cwe" path="res://assets/gamelevel1.mp3" id="2_otyms"]
 [ext_resource type="Texture2D" uid="uid://c3pnierqetfud" path="res://assets/sheet.png" id="5_ow3ty"]
+[ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="7_40tmr"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_lgoun"]
 shader = ExtResource("1_8lcj1")
@@ -22,12 +23,18 @@ shader_parameter/speed = 0.01
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s1ixi"]
 texture = ExtResource("5_ow3ty")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:0/0 = 0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0 = 0
@@ -47,10 +54,15 @@ texture = ExtResource("5_ow3ty")
 16:0/0 = 0
 0:1/0 = 0
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:1/0 = 0
+5:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:1/0 = 0
 7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:1/0 = 0
@@ -69,8 +81,11 @@ texture = ExtResource("5_ow3ty")
 15:1/0 = 0
 16:1/0 = 0
 2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:2/0 = 0
 7:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:2/0 = 0
@@ -89,8 +104,11 @@ texture = ExtResource("5_ow3ty")
 15:2/0 = 0
 16:2/0 = 0
 3:3/0 = 0
+3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
+4:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:3/0 = 0
+5:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:3/0 = 0
 7:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:3/0 = 0
@@ -108,7 +126,9 @@ texture = ExtResource("5_ow3ty")
 15:3/0 = 0
 16:3/0 = 0
 3:4/0 = 0
+3:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:4/0 = 0
 7:4/0 = 0
 8:4/0 = 0
@@ -126,7 +146,9 @@ texture = ExtResource("5_ow3ty")
 15:4/0 = 0
 16:4/0 = 0
 3:5/0 = 0
+3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:5/0 = 0
+4:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:5/0 = 0
 8:5/0 = 0
 8:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -139,14 +161,16 @@ texture = ExtResource("5_ow3ty")
 12:5/0 = 0
 12:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 13:5/0 = 0
-13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.9748, 8, 5.29732, 0.794598, 4.06128, -2.03064, 1.23604, -3.61983, -0.61802, -5.12074, -8, -7.32795, -8, 8)
+13:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 14:5/0 = 0
 15:5/0 = 0
 15:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.23966, 4.06127, -4.14956, 0.971174, 0.176578, -0.971175, 4.6793, 0, 5.20903, 6.53335, 5.73876, 8, -8, 8)
 16:5/0 = 0
 16:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.23966, 4.06127, -4.14956, 0.971174, 0.176578, -0.971175, 4.6793, 0, 5.20903, 6.53335, 5.73876, 8, -8, 8)
 3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:6/0 = 0
 8:6/0 = 0
 8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
@@ -165,8 +189,10 @@ texture = ExtResource("5_ow3ty")
 16:6/0 = 0
 16:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-7.23966, 4.06127, -4.14956, 0.971174, 0.176578, -0.971175, 4.6793, 0, 5.20903, 6.53335, 5.73876, 8, -8, 8)
 2:7/0 = 0
+2:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:7/0 = 0
 4:7/0 = 0
+4:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 5:7/0 = 0
 6:6/0 = 0
 6:5/0 = 0
@@ -174,6 +200,7 @@ texture = ExtResource("5_ow3ty")
 6:3/0 = 0
 6:2/0 = 0
 6:1/0 = 0
+6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_34nmp"]
 physics_layer_0/collision_layer = 1
@@ -225,7 +252,7 @@ grow_vertical = 2
 texture = ExtResource("1_der2d")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_k5qys")]
-position = Vector2(419, 332)
+position = Vector2(429, 727)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(658.92, 323.08)
@@ -238,4 +265,22 @@ position = Vector2(2.245, 9.79)
 scale = Vector2(3.12, 3.12)
 tile_set = SubResource("TileSet_34nmp")
 format = 2
-layer_0/tile_data = PackedInt32Array(720900, 720896, 0, 458750, 0, 1, 786432, 655360, 1, 786433, 720896, 1, 786434, 720896, 1, 786435, 720896, 1, 786436, 720896, 1, 786437, 786432, 1, 786439, 851968, 1, 786441, 655360, 3, 786442, 655360, 4, 786443, 786432, 3, 720896, 524288, 1, 720897, 458752, 0, 720898, 524288, 0, 720899, 589824, 0, 720901, 786432, 0, 720903, 851968, 0, 720905, 655360, 2, 720906, 720896, 2, 720907, 786432, 2, 655367, 1048576, 0)
+layer_0/tile_data = PackedInt32Array(720900, 720896, 0, 458750, 0, 1, 786432, 655360, 1, 786433, 720896, 1, 786434, 720896, 1, 786435, 720896, 1, 786436, 720896, 1, 786437, 786432, 1, 786439, 851968, 1, 786441, 655360, 3, 786442, 655360, 4, 786443, 786432, 3, 720896, 524288, 1, 720897, 458752, 0, 720898, 524288, 0, 720899, 589824, 0, 720901, 786432, 0, 720903, 851968, 0, 720905, 655360, 2, 720906, 720896, 2, 720907, 786432, 2, 655367, 1048576, 0, 655370, 1048576, 6, 262140, 0, 0, 327676, 0, 1, 262141, 65536, 0, 327677, 65536, 1, 262142, 131072, 0, 327678, 131072, 1, 393214, 131072, 2, 720894, 131072, 7, 262143, 196608, 0, 327679, 196608, 1, 393215, 196608, 2, 458751, 196608, 3, 524287, 196608, 4, 589823, 196608, 5, 655359, 196608, 6, 720895, 196608, 7, 196608, 262144, 0, 262144, 262144, 1, 327680, 262144, 2, 393216, 262144, 3, 458752, 262144, 4, 524288, 262144, 5, 589824, 262144, 6, 655360, 262144, 7, 196609, 327680, 0, 262145, 327680, 1, 393217, 327680, 3, 458753, 327680, 4, 655361, 327680, 7, 196610, 393216, 0, 262146, 393216, 1, 327682, 393216, 2, 393218, 393216, 3, 458754, 393216, 4, 524290, 393216, 5, 589826, 393216, 6, 720909, 524288, 5, 786445, 524288, 6, 720911, 655360, 2, 786447, 655360, 3, 720912, 720896, 2, 720913, 786432, 2, 786449, 786432, 3, 786448, 655360, 6, 655375, 917504, 3, 655376, 983040, 3, 655377, 1048576, 3)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 109.0
+offset_top = 78.0
+offset_right = 109.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("7_40tmr")
+theme_override_font_sizes/normal_font_size = 20
+text = "Space to Jump
+
+Arrow Keys to move"
+threaded = true
