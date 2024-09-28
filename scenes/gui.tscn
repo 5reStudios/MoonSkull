@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://bxrfdp44m2lev"]
+
+[ext_resource type="Texture2D" uid="uid://wu2ea8jls2p5" path="res://assets/moreassets/coin.png" id="1_87pvt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvrrc"]
+atlas = ExtResource("1_87pvt")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bxm1"]
+atlas = ExtResource("1_87pvt")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vl2k"]
+atlas = ExtResource("1_87pvt")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ecy5"]
+atlas = ExtResource("1_87pvt")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gl05n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvrrc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bxm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vl2k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ecy5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GUI" type="CanvasLayer"]
+
+[node name="positivity" type="Label" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -135.0
+offset_top = -93.0
+offset_right = -4.0
+offset_bottom = -2.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 66
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1101, 601)
+scale = Vector2(4.465, 4.465)
+sprite_frames = SubResource("SpriteFrames_gl05n")
+autoplay = "default"
