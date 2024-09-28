@@ -139,7 +139,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_od4xe")
 animation = &"skullwalking"
 autoplay = "idleskull"
-frame_progress = 0.786701
+frame_progress = 0.784567
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
 
