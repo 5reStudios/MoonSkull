@@ -1,7 +1,7 @@
 [gd_scene load_steps=12 format=3 uid="uid://du1ejbd20aks4"]
 
 [ext_resource type="Script" path="res://scenes/mainmenuftb.gd" id="1_gtt12"]
-[ext_resource type="AudioStream" uid="uid://bda5s712ogheh" path="res://music/mainmenumusichopefulastofus.mp3" id="2_wcctt"]
+[ext_resource type="AudioStream" uid="uid://cjkrmgts02h75" path="res://assets/moonskull.mp3" id="2_conrl"]
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="3_iho52"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="4_j2mhd"]
 [ext_resource type="Texture2D" uid="uid://cvaf56duhs2uo" path="res://assets/space-1164579.png" id="5_g42ia"]
@@ -43,7 +43,7 @@ grow_vertical = 2
 script = ExtResource("1_gtt12")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_wcctt")
+stream = ExtResource("2_conrl")
 autoplay = true
 
 [node name="TextureRect" type="ColorRect" parent="."]
