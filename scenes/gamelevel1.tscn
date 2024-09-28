@@ -4,9 +4,9 @@
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="1_8lcj1"]
 [ext_resource type="Texture2D" uid="uid://cvaf56duhs2uo" path="res://assets/space-1164579.png" id="1_der2d"]
 [ext_resource type="PackedScene" uid="uid://blcckit2adnu8" path="res://scenes/maincharacer.tscn" id="2_k5qys"]
-[ext_resource type="AudioStream" uid="uid://bgympsmi37cwe" path="res://assets/gamelevel1.mp3" id="2_otyms"]
 [ext_resource type="Shader" path="res://shaders/blackandwhite.gdshader" id="5_ealex"]
 [ext_resource type="Texture2D" uid="uid://c3pnierqetfud" path="res://assets/sheet.png" id="5_ow3ty"]
+[ext_resource type="AudioStream" uid="uid://bfrccqfkgo5ss" path="res://music/dark-ambient-126122.mp3" id="6_obqbm"]
 [ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="7_40tmr"]
 [ext_resource type="Texture2D" uid="uid://dcvqkumvrnl6n" path="res://assets/stringstar fields/tileset.png" id="7_b5mwq"]
 [ext_resource type="PackedScene" uid="uid://bu2xbah3h87em" path="res://scenes/coin.tscn" id="9_fa6dw"]
@@ -451,7 +451,7 @@ position = Vector2(656, 731)
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2(658.92, 323.08)
 scale = Vector2(0.705, 0.705)
-stream = ExtResource("2_otyms")
+stream = ExtResource("6_obqbm")
 autoplay = true
 
 [node name="TileMap2" type="TileMap" parent="."]
@@ -495,7 +495,6 @@ scale = Vector2(2.225, 2.225)
 shape = SubResource("WorldBoundaryShape2D_2twav")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 blend_mode = 1
 
 [node name="coins" type="Node2D" parent="."]
