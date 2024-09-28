@@ -422,4 +422,10 @@ position = Vector2(-380, -236)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
 animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.806621
+frame_progress = 0.647442
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-393, -183)
+zoom = Vector2(2.065, 2.065)
+limit_left = -10004536
+position_smoothing_enabled = true

@@ -495,7 +495,6 @@ scale = Vector2(2.225, 2.225)
 shape = SubResource("WorldBoundaryShape2D_2twav")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
-visible = false
 blend_mode = 1
 
 [node name="coins" type="Node2D" parent="."]
