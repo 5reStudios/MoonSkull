@@ -1,6 +1,7 @@
-[gd_scene load_steps=54 format=3 uid="uid://blcckit2adnu8"]
+[gd_scene load_steps=56 format=3 uid="uid://blcckit2adnu8"]
 
 [ext_resource type="Texture2D" uid="uid://cwycmu44740g2" path="res://assets/characters/Enchantress/Idle.png" id="1_0v5t1"]
+[ext_resource type="Shader" path="res://shaders/blackandwhite.gdshader" id="1_rsms3"]
 [ext_resource type="Texture2D" uid="uid://dp3icto0b4hhv" path="res://assets/characters/Enchantress/Jump.png" id="2_siq5f"]
 [ext_resource type="Texture2D" uid="uid://bci21e653kdyn" path="res://assets/characters/Enchantress/Attack_1.png" id="2_w5c1d"]
 [ext_resource type="Texture2D" uid="uid://duw12plnxx1aa" path="res://assets/characters/Enchantress/Run.png" id="3_cwe4v"]
@@ -70,6 +71,11 @@ fill_to = Vector2(6.384, 5.259)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_msbd2"]
 radius = 14.0
 height = 68.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jlvom"]
+shader = ExtResource("1_rsms3")
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 0.5
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3n3r7"]
 atlas = ExtResource("2_w5c1d")
@@ -396,7 +402,7 @@ animations = [{
 "speed": 8.0
 }]
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="CharacterBody2D" type="CharacterBody2D" groups=["player"]]
 script = SubResource("GDScript_b23vk")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
@@ -411,8 +417,9 @@ position = Vector2(-386.06, -207)
 shape = SubResource("CapsuleShape2D_msbd2")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_jlvom")
 position = Vector2(-380, -236)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
 animation = &"jumping"
 autoplay = "idle"
-frame_progress = 0.854803
+frame_progress = 0.024892

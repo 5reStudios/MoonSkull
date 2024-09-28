@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://du1ejbd20aks4"]
+[gd_scene load_steps=12 format=3 uid="uid://du1ejbd20aks4"]
 
 [ext_resource type="Script" path="res://scenes/mainmenuftb.gd" id="1_gtt12"]
 [ext_resource type="AudioStream" uid="uid://cjkrmgts02h75" path="res://assets/moonskull.mp3" id="2_conrl"]
-[ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="3_688ly"]
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="3_iho52"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="4_j2mhd"]
 [ext_resource type="Texture2D" uid="uid://cvaf56duhs2uo" path="res://assets/space-1164579.png" id="5_g42ia"]
+[ext_resource type="FontFile" uid="uid://ctglty1n3gg2m" path="res://fonts/Intensa Fuente.ttf" id="6_qxbg2"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_up2yy"]
 shader = ExtResource("3_iho52")
@@ -16,6 +16,12 @@ shader = ExtResource("4_j2mhd")
 shader_parameter/speed = 0.01
 shader_parameter/flicker_intensity = 0.1
 shader_parameter/flicker_speed = 0.01
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h2ee3"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Theme" id="Theme_kn1ar"]
+Button/styles/normal = SubResource("StyleBoxFlat_h2ee3")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_der2h"]
 bg_color = Color(1, 1, 1, 1)
@@ -91,15 +97,17 @@ offset_right = 205.185
 offset_bottom = 472.392
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_constants/separation = 10
+theme_override_constants/separation = 5
 alignment = 1
 
 [node name="startgame" type="Button" parent="Buttonlist"]
 layout_mode = 2
 size_flags_vertical = 3
+theme = SubResource("Theme_kn1ar")
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 5
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("6_qxbg2")
+theme_override_font_sizes/font_size = 60
 theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
 action_mode = 0
 text = "Start Game"
@@ -109,7 +117,8 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 5
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("6_qxbg2")
+theme_override_font_sizes/font_size = 75
 theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
 text = "Options"
 
@@ -118,7 +127,8 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/h_separation = 5
-theme_override_font_sizes/font_size = 25
+theme_override_fonts/font = ExtResource("6_qxbg2")
+theme_override_font_sizes/font_size = 80
 theme_override_styles/normal = SubResource("StyleBoxFlat_der2h")
 text = "Exit"
 
@@ -130,16 +140,17 @@ anchor_top = 0.231
 anchor_right = 0.536
 anchor_bottom = 0.231
 offset_left = -561.04
-offset_top = -97.688
+offset_top = -169.688
 offset_right = 572.528
-offset_bottom = 88.312
+offset_bottom = 157.312
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.945, 0.945)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_688ly")
-theme_override_font_sizes/font_size = 155
-text = "LATEOTT"
+theme_override_fonts/font = ExtResource("6_qxbg2")
+theme_override_font_sizes/font_size = 120
+text = "The Light At the
+ End of THe Tunnel"
 horizontal_alignment = 1
 vertical_alignment = 1
 

@@ -32,6 +32,10 @@ window/size/window_height_override=1440
 window/stretch/mode="canvas_items"
 mouse_cursor/custom_image="res://assets/moreassets/Cursors/CRS_HAND.png"
 
+[global_group]
+
+player=""
+
 [input]
 
 ui_left={

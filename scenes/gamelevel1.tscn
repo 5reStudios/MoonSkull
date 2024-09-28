@@ -1,10 +1,11 @@
-[gd_scene load_steps=19 format=3 uid="uid://bw1ne5p400ram"]
+[gd_scene load_steps=21 format=3 uid="uid://bw1ne5p400ram"]
 
 [ext_resource type="Shader" path="res://scenes/level1bgscroll.gdshader" id="1_2drxh"]
 [ext_resource type="Shader" path="res://scenes/starpatternslow.gdshader" id="1_8lcj1"]
 [ext_resource type="Texture2D" uid="uid://cvaf56duhs2uo" path="res://assets/space-1164579.png" id="1_der2d"]
 [ext_resource type="PackedScene" uid="uid://blcckit2adnu8" path="res://scenes/maincharacer.tscn" id="2_k5qys"]
 [ext_resource type="AudioStream" uid="uid://bgympsmi37cwe" path="res://assets/gamelevel1.mp3" id="2_otyms"]
+[ext_resource type="Shader" path="res://shaders/blackandwhite.gdshader" id="5_ealex"]
 [ext_resource type="Texture2D" uid="uid://c3pnierqetfud" path="res://assets/sheet.png" id="5_ow3ty"]
 [ext_resource type="FontFile" uid="uid://du22h7lh01vkw" path="res://fonts/UncannyRegular-Z7lz.otf" id="7_40tmr"]
 [ext_resource type="Texture2D" uid="uid://dcvqkumvrnl6n" path="res://assets/stringstar fields/tileset.png" id="7_b5mwq"]
@@ -19,6 +20,11 @@ shader = ExtResource("1_8lcj1")
 shader_parameter/speed = 0.01
 shader_parameter/flicker_intensity = 0.2
 shader_parameter/flicker_speed = 5.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2o85o"]
+shader = ExtResource("5_ealex")
+shader_parameter/flicker_intensity = 0.2
+shader_parameter/flicker_speed = 0.5
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xvib0"]
 
@@ -439,6 +445,7 @@ grow_vertical = 2
 texture = ExtResource("1_der2d")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_k5qys")]
+material = SubResource("ShaderMaterial_2o85o")
 position = Vector2(656, 731)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
@@ -515,6 +522,13 @@ autoplay = "default"
 frame = 3
 frame_progress = 0.232098
 
+[node name="coin8" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(328.974, -15.2047)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
 [node name="coin4" parent="coins" instance=ExtResource("9_fa6dw")]
 position = Vector2(-331.739, 20.0425)
 scale = Vector2(1, 1)
@@ -524,6 +538,27 @@ frame_progress = 0.232098
 
 [node name="coin5" parent="coins" instance=ExtResource("9_fa6dw")]
 position = Vector2(147.9, 0.691116)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin6" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(353.855, 41.4673)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin7" parent="coins" instance=ExtResource("9_fa6dw")]
+position = Vector2(292.345, 41.4673)
+scale = Vector2(1, 1)
+autoplay = "default"
+frame = 3
+frame_progress = 0.232098
+
+[node name="coin9" parent="coins" groups=["player"] instance=ExtResource("9_fa6dw")]
+position = Vector2(-158.958, -65.6566)
 scale = Vector2(1, 1)
 autoplay = "default"
 frame = 3
