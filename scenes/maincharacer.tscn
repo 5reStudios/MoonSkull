@@ -53,6 +53,12 @@ func _physics_process(delta):
 	var isLeft =  velocity.x < 0 
 	sprite_2d.flip_h = isLeft
 	print(Gamemanager.positivity)
+
+func killplayer():
+	position = %respawnpoint.position
+	$Sprite2D.flip_h = false
+func _on_deatharea_body_entered(body: Node2D) -> void:
+	killplayer()
 "
 
 [sub_resource type="Gradient" id="Gradient_or8uv"]
@@ -307,7 +313,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 1.0
+"speed": 2.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -336,7 +342,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"jumping",
-"speed": 3.0
+"speed": 7.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -417,12 +423,14 @@ material = SubResource("ShaderMaterial_jlvom")
 position = Vector2(-386, -236)
 scale = Vector2(0.625, 0.625)
 sprite_frames = SubResource("SpriteFrames_1g6mb")
-animation = &"jumping"
+animation = &"running"
 autoplay = "idle"
-frame_progress = 0.855374
+frame_progress = 0.196097
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-393, -183)
 zoom = Vector2(2.99, 2.99)
 limit_left = -10004536
+limit_bottom = 800
+limit_smoothed = true
 position_smoothing_enabled = true
